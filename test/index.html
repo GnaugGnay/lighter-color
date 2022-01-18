@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Test</title>
+  <style>
+    #demo {
+      width: 200px;
+      height: 100px;
+      background-color: #000;
+      transition: background-color .3s linear;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+  <div>
+    <button onclick="lighter()">lighter</button>
+    <button onclick="darker()">darker</button>
+  </div>
+  <script src="../Color.js"></script>
+  <script>
+    const demo = document.getElementById('demo');
+    let color = 'rgb(0, 0, 0)';
+
+    function lighter() {
+      color = Color.lighter(color);
+      demo.style.backgroundColor = color;
+    }
+
+    function darker() {
+      color = Color.darker(color);
+      demo.style.backgroundColor = color;
+    }
+  </script>
+</body>
+</html>

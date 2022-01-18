@@ -1,0 +1,1 @@
+### A Singleton Pattern Class used for colors.
