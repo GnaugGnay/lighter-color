@@ -29,9 +29,7 @@ const _toRgbArray = color => {
   }
 
   // delete extra chars and return an array
-  return colorStr.replace(/rgb|rgba|\(|\)/g, '').split(',').map(el => {
-    return parseInt(el);
-  });
+  return colorStr.replace(/rgb|\(|\)/g, '').split(',').map(el => parseInt(el));
 }
 
 /**
